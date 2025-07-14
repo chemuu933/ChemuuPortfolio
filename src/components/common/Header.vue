@@ -42,6 +42,12 @@ const closeMobileMenu = () => {
   mobileMenuOpen.value = false;
 };
 
+// Define the checkScrollPosition function
+const checkScrollPosition = () => {
+  // Example: You can add logic here if you want to handle scroll events
+  // For now, it's just a placeholder to avoid errors
+};
+
 onMounted(() => {
   window.addEventListener('scroll', checkScrollPosition);
   checkScrollPosition();
