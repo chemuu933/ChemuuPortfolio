@@ -38,7 +38,7 @@
             </div>
           </div>
         </div>
-    
+
         <div class="bg-gray-50 rounded-xl shadow-lg p-8">
           <h3 class="text-2xl font-semibold text-gray-800 mb-6">
             Additional Skills
@@ -65,23 +65,26 @@
 </template>
 <script lang="ts" setup>
 const technicalSkills = [
-  { name: 'HTML/CSS', level: 90 },
-  { name: 'JavaScript', level: 85 },
-  { name: 'React', level: 80 },
-  { name: 'Vue.js', level: 75 },
-  { name: 'Express.js', level: 70 },
-  { name: 'Responsive Design', level: 85 }
+  { name: "HTML/CSS", level: 90 },
+  { name: "JavaScript", level: 85 },
+  { name: "React", level: 80 },
+  { name: "Vue.js", level: 75 },
+  { name: "Express.js", level: 70 },
+  { name: "Responsive Design", level: 85 },
 ];
 
-
 const softSkills = [
-  { name: 'Problem Solving', icon: 'fa-lightbulb' },
-  { name: 'Team Collaboration', icon: 'fa-users' },
-  { name: 'Git/Version Control', icon: 'fa-code-branch' },
-  { name: 'UI/UX Design', icon: 'fa-pencil-ruler' },
-  { name: 'Database Management', icon: 'fa-database' },
-  { name: 'Agile Methodology', icon: 'fa-tasks' },
-  { name: 'RESTful APIs', icon: 'fa-server' },
-  { name: 'Testing/Debugging', icon: 'fa-bug' }
+  { name: "Problem Solving", icon: "fa-lightbulb" },
+  { name: "Team Collaboration", icon: "fa-users" },
+  { name: "Git/Version Control", icon: "fa-code-branch" },
+  { name: "UI/UX Design", icon: "fa-pencil-ruler" },
+  { name: "Database Management", icon: "fa-database" },
+  { name: "Communication", icon: "fa-comments" },
+  { name: "Time Management", icon: "fa-clock" },
+  { name: "Problem Solving", icon: "fa-lightbulb" },
+  { name: "Adaptability", icon: "fa-sync-alt" },
+  { name: "Code Review", icon: "fa-check-circle" },
+  { name: "RESTful APIs", icon: "fa-server" },
+  { name: "Testing/Debugging", icon: "fa-bug" },
 ];
 </script>

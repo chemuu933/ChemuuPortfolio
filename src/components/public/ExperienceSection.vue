@@ -63,21 +63,21 @@ export default {
     return {
       timeline: [
         {
-          date: "2020 - Present",
+          date: "2025- Present",
           title: "Frontend Developer",
           description: "Building modern web applications using Vue.js and other technologies.",
           icon: "fa-laptop-code"
         },
         {
-          date: "2018 - 2020",
+          date: "2025 - 2026  ",
           title: "Intern Developer",
           description: "Worked on various projects and gained valuable experience in software development.",
           icon: "fa-briefcase"
         },
         {
-          date: "2015 - 2018",
-          title: "Bachelor's Degree",
-          description: "Studied Computer Science at University and learned the fundamentals of programming.",
+          date: "2023 - 2025",
+          title: "Diploma in Information Technology",
+          description: "Studied information technology at  kabarak University and learned the fundamentals of programming.",
           icon: "fa-graduation-cap"
         }
       ]

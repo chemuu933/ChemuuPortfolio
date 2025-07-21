@@ -47,6 +47,7 @@
   </div>
 </template>
 <script lang="ts" setup>
+// @ts-ignore
 import profileImageUrl from '../../assets/chemuu1.jpeg'
 
 const heroBackgroundUrl = 'https://readdy.ai/api/search-image?query=modern%20tech%20abstract%20background%20with%20blue%20and%20purple%20gradient%2C%20digital%20technology%20concept%2C%20high%20resolution%2C%20professional%2C%20clean%20design%2C%20suitable%20for%20web%20header&width=1440&height=800&seq=1&orientation=landscape';

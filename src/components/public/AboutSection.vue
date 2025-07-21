@@ -45,8 +45,8 @@
               <span class="text-purple-700">Frontend Developer</span>
             </div>
             <div class="flex items-center bg-white px-4 py-2 rounded-lg shadow">
-              <i class="fas fa-laptop-code text-indigo-600 mr-2"></i>
-              <span class="text-purple-700">Problem Solver</span>
+              <i class="fas fa-pencil-alt text-indigo-600 mr-2"></i>
+              <span class="text-purple-700">UI/UX Designer</span>
             </div>
           </div>
         </div>
