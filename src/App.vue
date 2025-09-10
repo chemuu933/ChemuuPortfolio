@@ -22,3 +22,4 @@ import ContactSection from "./components/public/ContactSection.vue";
 import ExperienceSection from "./components/public/ExperienceSection.vue";
 
 </script>
+;
