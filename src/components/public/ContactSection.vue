@@ -1,122 +1,189 @@
 <template>
-  <section id="contact" class="py-20 bg-gradient-to-br from-rose-100 via-pink-50 to-purple-100 relative overflow-hidden">
-    <!-- Floating decorative elements -->
-    <div class="absolute top-20 left-16 animate-float-hearts">
-      <span class="text-4xl text-pink-300 opacity-30">💕</span>
+  <section id="contact" class="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 relative overflow-hidden">
+    <!-- Animated background elements -->
+    <div class="absolute inset-0 opacity-30">
+      <div class="absolute top-20 left-20 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl animate-pulse-slow"></div>
+      <div class="absolute bottom-20 right-20 w-96 h-96 bg-teal-500/20 rounded-full blur-3xl animate-pulse-slower"></div>
+      <div class="absolute top-1/2 left-1/2 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-float"></div>
     </div>
-    <div class="absolute top-40 right-20 animate-float-sparkle">
-      <span class="text-3xl text-rose-400 opacity-40">✨</span>
-    </div>
-    <div class="absolute bottom-32 left-1/4 animate-float-butterfly">
-      <span class="text-2xl text-purple-400 opacity-35">🦋</span>
-    </div>
-    <div class="absolute bottom-16 right-1/3 animate-float-flower">
-      <span class="text-3xl text-pink-400 opacity-30">🌸</span>
-    </div>
-    <div class="absolute top-60 left-1/2 animate-float-star">
-      <span class="text-2xl text-rose-300 opacity-25">⭐</span>
-    </div>
+
+    <!-- Grid pattern overlay -->
+    <div class="absolute inset-0 opacity-5" style="background-image: linear-gradient(#14b8a6 1px, transparent 1px), linear-gradient(90deg, #14b8a6 1px, transparent 1px); background-size: 50px 50px;"></div>
 
     <div class="container mx-auto px-6 relative z-10">
       <div class="text-center mb-16 animate-fade-in-up">
-        <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4 animate-slide-down">
-          💌 Get In Touch 💌
+        <h2 class="text-4xl md:text-5xl font-bold text-white mb-4 animate-slide-down">
+          Get In Touch
         </h2>
-        <div class="w-20 h-1 bg-gradient-to-r from-pink-400 via-rose-500 to-purple-500 mx-auto rounded-full animate-expand-line"></div>
-        <p class="text-gray-700 mt-6 max-w-2xl mx-auto text-lg animate-fade-in" style="animation-delay: 0.3s">
+        <div class="w-20 h-1 bg-gradient-to-r from-cyan-400 to-teal-500 mx-auto rounded-full animate-expand-line"></div>
+        <p class="text-gray-300 mt-6 max-w-2xl mx-auto text-lg animate-fade-in" style="animation-delay: 0.3s">
           Have a project in mind or want to discuss potential opportunities? I'd
-          love to hear from you! 🌟
+          love to hear from you!
         </p>
       </div>
 
       <div class="flex flex-col lg:flex-row gap-10">
+        <!-- Contact Information -->
+        <div class="lg:w-2/5 animate-slide-in-left">
+          <div class="bg-slate-800/50 backdrop-blur-xl p-8 rounded-3xl border border-slate-700/50 hover:border-cyan-500/30 transition-all duration-500 h-full shadow-2xl">
+            
+            <!-- Contact Info Cards -->
+            <div class="space-y-6 mb-10">
+              <div class="flex items-center animate-contact-item bg-slate-700/30 p-5 rounded-2xl border border-slate-600/30 hover:border-cyan-500/50 hover:bg-slate-700/50 transition-all duration-300 group cursor-pointer" style="animation-delay: 0.1s">
+                <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-cyan-400 to-teal-500 flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-cyan-500/20">
+                  <i class="fas fa-envelope text-slate-900 text-xl"></i>
+                </div>
+                <div>
+                  <h4 class="text-sm font-medium text-gray-400 mb-1">Email</h4>
+                  <a
+                    href="mailto:jemutaic18@gmail.com"
+                    class="text-white hover:text-cyan-400 transition-colors duration-300 font-medium"
+                  >jemutaic18@gmail.com</a>
+                </div>
+              </div>
+
+              <div class="flex items-center animate-contact-item bg-slate-700/30 p-5 rounded-2xl border border-slate-600/30 hover:border-cyan-500/50 hover:bg-slate-700/50 transition-all duration-300 group cursor-pointer" style="animation-delay: 0.2s">
+                <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-cyan-400 to-teal-500 flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-cyan-500/20">
+                  <i class="fas fa-phone text-slate-900 text-xl"></i>
+                </div>
+                <div>
+                  <h4 class="text-sm font-medium text-gray-400 mb-1">Phone</h4>
+                  <p class="text-white">+254708345963</p>
+                </div>
+              </div>
+
+              <div class="flex items-center animate-contact-item bg-slate-700/30 p-5 rounded-2xl border border-slate-600/30 hover:border-cyan-500/50 hover:bg-slate-700/50 transition-all duration-300 group cursor-pointer" style="animation-delay: 0.3s">
+                <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-cyan-400 to-teal-500 flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-cyan-500/20">
+                  <i class="fas fa-map-marker-alt text-slate-900 text-xl"></i>
+                </div>
+                <div>
+                  <h4 class="text-sm font-medium text-gray-400 mb-1">Location</h4>
+                  <p class="text-white">Nakuru, Kenya 🇰🇪</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Social Links -->
+            <div class="animate-fade-in" style="animation-delay: 0.4s">
+              <h4 class="text-lg font-medium text-white mb-6">Follow Me</h4>
+              <div class="flex flex-wrap gap-4">
+                <a
+                  href="https://github.com/chemuu933/"
+                  target="_blank"
+                  class="w-12 h-12 rounded-xl bg-slate-700/50 hover:bg-slate-600 border border-slate-600/50 hover:border-cyan-500/50 flex items-center justify-center text-gray-300 hover:text-cyan-400 transition-all duration-300 transform hover:scale-110 hover:shadow-lg hover:shadow-cyan-500/20 group"
+                >
+                  <i class="fab fa-github text-lg group-hover:animate-bounce"></i>
+                </a>
+                <a
+                  href="https://linkedin.com/"
+                  target="_blank"
+                  class="w-12 h-12 rounded-xl bg-slate-700/50 hover:bg-slate-600 border border-slate-600/50 hover:border-cyan-500/50 flex items-center justify-center text-gray-300 hover:text-cyan-400 transition-all duration-300 transform hover:scale-110 hover:shadow-lg hover:shadow-cyan-500/20 group"
+                >
+                  <i class="fab fa-linkedin-in text-lg group-hover:animate-bounce"></i>
+                </a>
+                <a
+                  href="https://twitter.com/"
+                  target="_blank"
+                  class="w-12 h-12 rounded-xl bg-slate-700/50 hover:bg-slate-600 border border-slate-600/50 hover:border-cyan-500/50 flex items-center justify-center text-gray-300 hover:text-cyan-400 transition-all duration-300 transform hover:scale-110 hover:shadow-lg hover:shadow-cyan-500/20 group"
+                >
+                  <i class="fab fa-twitter text-lg group-hover:animate-bounce"></i>
+                </a>
+                <a
+                  href="https://dribbble.com/"
+                  target="_blank"
+                  class="w-12 h-12 rounded-xl bg-slate-700/50 hover:bg-slate-600 border border-slate-600/50 hover:border-cyan-500/50 flex items-center justify-center text-gray-300 hover:text-cyan-400 transition-all duration-300 transform hover:scale-110 hover:shadow-lg hover:shadow-cyan-500/20 group"
+                >
+                  <i class="fab fa-dribbble text-lg group-hover:animate-bounce"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <!-- Contact Form -->
-        <div class="lg:w-1/2 animate-slide-in-left">
+        <div class="lg:w-3/5 animate-slide-in-right">
           <form
             @submit.prevent="submitForm"
-            class="bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-2xl border border-white/50 hover:shadow-3xl transition-all duration-500"
+            class="bg-slate-800/50 backdrop-blur-xl p-8 rounded-3xl border border-slate-700/50 hover:border-cyan-500/30 transition-all duration-500 shadow-2xl"
           >
             <div class="mb-6 animate-input-appear" style="animation-delay: 0.1s">
-              <label for="name" class="block text-gray-800 font-medium mb-3 flex items-center">
-                <span class="text-pink-500 mr-2">👤</span>
+              <label for="name" class="block text-white font-medium mb-3">
                 Your Name
               </label>
               <input
                 type="text"
                 id="name"
                 v-model="contactForm.name"
-                class="w-full px-4 py-3 border-2 border-pink-200 rounded-xl focus:ring-2 focus:ring-pink-400 focus:border-pink-400 outline-none transition-all duration-300 bg-white/90 hover:bg-white focus:bg-white hover:border-pink-300"
+                class="w-full px-5 py-4 bg-slate-700/50 border border-slate-600/50 rounded-xl focus:ring-2 focus:ring-cyan-500 focus:border-cyan-500 outline-none transition-all duration-300 text-white placeholder-gray-500 hover:bg-slate-700 hover:border-slate-500"
                 placeholder="June chemuu"
                 required
               />
             </div>
 
             <div class="mb-6 animate-input-appear" style="animation-delay: 0.2s">
-              <label for="email" class="block text-gray-800 font-medium mb-3 flex items-center">
-                <span class="text-rose-500 mr-2">💌</span>
-                Your Email
+              <label for="email" class="block text-white font-medium mb-3">
+                Email Address
               </label>
               <input
                 type="email"
                 id="email"
                 v-model="contactForm.email"
-                class="w-full px-4 py-3 border-2 border-pink-200 rounded-xl focus:ring-2 focus:ring-pink-400 focus:border-pink-400 outline-none transition-all duration-300 bg-white/90 hover:bg-white focus:bg-white hover:border-pink-300"
+                class="w-full px-5 py-4 bg-slate-700/50 border border-slate-600/50 rounded-xl focus:ring-2 focus:ring-cyan-500 focus:border-cyan-500 outline-none transition-all duration-300 text-white placeholder-gray-500 hover:bg-slate-700 hover:border-slate-500"
                 placeholder="chemuu579@gmail.com"
                 required
               />
             </div>
 
             <div class="mb-6 animate-input-appear" style="animation-delay: 0.3s">
-              <label for="subject" class="block text-gray-800 font-medium mb-3 flex items-center">
-                <span class="text-purple-500 mr-2">📋</span>
+              <label for="subject" class="block text-white font-medium mb-3">
                 Subject
               </label>
               <input
                 type="text"
                 id="subject"
                 v-model="contactForm.subject"
-                class="w-full px-4 py-3 border-2 border-pink-200 rounded-xl focus:ring-2 focus:ring-pink-400 focus:border-pink-400 outline-none transition-all duration-300 bg-white/90 hover:bg-white focus:bg-white hover:border-pink-300"
+                class="w-full px-5 py-4 bg-slate-700/50 border border-slate-600/50 rounded-xl focus:ring-2 focus:ring-cyan-500 focus:border-cyan-500 outline-none transition-all duration-300 text-white placeholder-gray-500 hover:bg-slate-700 hover:border-slate-500"
                 placeholder="Project Inquiry"
                 required
               />
             </div>
 
             <div class="mb-6 animate-input-appear" style="animation-delay: 0.4s">
-              <label for="message" class="block text-gray-800 font-medium mb-3 flex items-center">
-                <span class="text-pink-500 mr-2">💭</span>
+              <label for="message" class="block text-white font-medium mb-3">
                 Message
               </label>
               <textarea
                 id="message"
                 v-model="contactForm.message"
                 rows="5"
-                class="w-full px-4 py-3 border-2 border-pink-200 rounded-xl focus:ring-2 focus:ring-pink-400 focus:border-pink-400 outline-none transition-all duration-300 bg-white/90 hover:bg-white focus:bg-white hover:border-pink-300 resize-none"
-                placeholder="Your message here..."
+                class="w-full px-5 py-4 bg-slate-700/50 border border-slate-600/50 rounded-xl focus:ring-2 focus:ring-cyan-500 focus:border-cyan-500 outline-none transition-all duration-300 text-white placeholder-gray-500 hover:bg-slate-700 hover:border-slate-500 resize-none"
+                placeholder="Tell me about your project..."
                 required
               ></textarea>
             </div>
 
             <button
               type="submit"
-              class="w-full bg-gradient-to-r from-pink-400 via-rose-500 to-purple-500 hover:from-pink-500 hover:via-rose-600 hover:to-purple-600 text-white py-4 px-6 rounded-xl font-medium transition-all duration-300 transform hover:scale-105 hover:shadow-xl animate-button-appear relative overflow-hidden group"
+              class="w-full bg-gradient-to-r from-cyan-500 to-teal-500 hover:from-cyan-600 hover:to-teal-600 text-white py-4 px-6 rounded-xl font-medium transition-all duration-300 transform hover:scale-105 hover:shadow-xl hover:shadow-cyan-500/30 animate-button-appear relative overflow-hidden group"
               :disabled="formSubmitting"
               style="animation-delay: 0.5s"
             >
               <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -skew-x-12 group-hover:animate-shimmer"></div>
               <span v-if="formSubmitting" class="flex items-center justify-center">
-                <i class="fas fa-spinner fa-spin mr-2"></i> Sending Magic... ✨
+                <i class="fas fa-spinner fa-spin mr-2"></i> Sending...
               </span>
               <span v-else class="flex items-center justify-center">
-                <span class="mr-2">Send Message</span> 🚀
+                <span class="mr-2">Send Message</span>
+                <i class="fas fa-paper-plane"></i>
               </span>
             </button>
 
             <div
               v-if="formSuccess"
-              class="mt-6 p-4 bg-gradient-to-r from-green-100 to-emerald-100 text-green-800 rounded-xl border border-green-200 animate-success-bounce"
+              class="mt-6 p-4 bg-gradient-to-r from-emerald-500/20 to-teal-500/20 border border-emerald-500/30 text-emerald-300 rounded-xl animate-success-bounce"
             >
               <div class="flex items-center">
-                <span class="text-2xl mr-3">🎉</span>
+                <i class="fas fa-check-circle text-2xl mr-3"></i>
                 <div>
                   <p class="font-medium">Thank you!</p>
                   <p class="text-sm">Your message has been sent successfully.</p>
@@ -124,100 +191,6 @@
               </div>
             </div>
           </form>
-        </div>
-
-        <!-- Contact Information -->
-        <div class="lg:w-1/2 animate-slide-in-right">
-          <div class="bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-2xl h-full border border-white/50 hover:shadow-3xl transition-all duration-500">
-            <h3 class="text-2xl font-semibold text-gray-800 mb-8 animate-fade-in flex items-center" style="animation-delay: 0.2s">
-              <span class="text-3xl mr-3">📞</span>
-              Contact Information
-            </h3>
-
-            <div class="space-y-6">
-              <div class="flex items-start animate-contact-item group cursor-pointer" style="animation-delay: 0.3s">
-                <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-pink-100 to-rose-200 flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300 shadow-lg">
-                  <i class="fas fa-envelope text-pink-600 text-xl"></i>
-                </div>
-                <div>
-                  <h4 class="text-lg font-medium text-gray-800 mb-1">Email</h4>
-                  <a
-                    href="mailto:jemutaic18@gmail.com"
-                    class="text-pink-600 hover:text-pink-700 hover:underline transition-colors duration-300 font-medium"
-                  >jemutaic18@gmail.com</a>
-                </div>
-              </div>
-
-              <div class="flex items-start animate-contact-item group cursor-pointer" style="animation-delay: 0.4s">
-                <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-rose-100 to-pink-200 flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300 shadow-lg">
-                  <i class="fas fa-map-marker-alt text-rose-600 text-xl"></i>
-                </div>
-                <div>
-                  <h4 class="text-lg font-medium text-gray-800 mb-1">Location</h4>
-                  <p class="text-gray-600">Nakuru, Kenya 🇰🇪</p>
-                </div>
-              </div>
-
-              <div class="flex items-start animate-contact-item group cursor-pointer" style="animation-delay: 0.5s">
-                <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-purple-100 to-pink-200 flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300 shadow-lg">
-                  <i class="fas fa-clock text-purple-600 text-xl"></i>
-                </div>
-                <div>
-                  <h4 class="text-lg font-medium text-gray-800 mb-1">Availability</h4>
-                  <p class="text-gray-600">Monday - Friday, 9:00 AM - 5:00 PM EAT ⏰</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="mt-10 animate-fade-in" style="animation-delay: 0.6s">
-              <h4 class="text-lg font-medium text-gray-800 mb-6 flex items-center">
-                <span class="text-2xl mr-2">🔗</span>
-                Connect With Me
-              </h4>
-              <div class="flex flex-wrap gap-4">
-                <a
-                  href="https://github.com/"
-                  target="_blank"
-                  class="w-14 h-14 rounded-2xl bg-gradient-to-br from-gray-700 to-gray-900 hover:from-gray-800 hover:to-black flex items-center justify-center text-white transition-all duration-300 transform hover:scale-110 hover:shadow-xl group"
-                >
-                  <i class="fab fa-github text-xl group-hover:animate-bounce"></i>
-                </a>
-                <a
-                  href="https://linkedin.com/"
-                  target="_blank"
-                  class="w-14 h-14 rounded-2xl bg-gradient-to-br from-blue-600 to-blue-800 hover:from-blue-700 hover:to-blue-900 flex items-center justify-center text-white transition-all duration-300 transform hover:scale-110 hover:shadow-xl group"
-                >
-                  <i class="fab fa-linkedin-in text-xl group-hover:animate-bounce"></i>
-                </a>
-                <a
-                  href="https://twitter.com/"
-                  target="_blank"
-                  class="w-14 h-14 rounded-2xl bg-gradient-to-br from-blue-400 to-blue-600 hover:from-blue-500 hover:to-blue-700 flex items-center justify-center text-white transition-all duration-300 transform hover:scale-110 hover:shadow-xl group"
-                >
-                  <i class="fab fa-twitter text-xl group-hover:animate-bounce"></i>
-                </a>
-                <a
-                  href="https://codepen.io/"
-                  target="_blank"
-                  class="w-14 h-14 rounded-2xl bg-gradient-to-br from-gray-900 to-black hover:from-black hover:to-gray-900 flex items-center justify-center text-white transition-all duration-300 transform hover:scale-110 hover:shadow-xl group"
-                >
-                  <i class="fab fa-codepen text-xl group-hover:animate-bounce"></i>
-                </a>
-              </div>
-            </div>
-
-            <div class="mt-10 animate-fade-in" style="animation-delay: 0.7s">
-              <a
-                href="#"
-                class="inline-flex items-center bg-gradient-to-r from-purple-400 via-pink-500 to-rose-500 hover:from-purple-500 hover:via-pink-600 hover:to-rose-600 text-white py-4 px-6 rounded-xl font-medium transition-all duration-300 transform hover:scale-105 hover:shadow-xl relative overflow-hidden group"
-              >
-                <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -skew-x-12 group-hover:animate-shimmer"></div>
-                <i class="fas fa-download mr-2 group-hover:animate-bounce"></i> 
-                <span>Download Resume</span>
-                <span class="ml-2">📄</span>
-              </a>
-            </div>
-          </div>
         </div>
       </div>
     </div>
@@ -262,31 +235,32 @@ const submitForm = () => {
 </script>
 
 <style scoped>
-/* Floating animations */
-@keyframes float-hearts {
-  0%, 100% { transform: translateY(0px) rotate(0deg); }
-  50% { transform: translateY(-20px) rotate(10deg); }
+/* Background animations */
+@keyframes pulse-slow {
+  0%, 100% { opacity: 0.3; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(1.1); }
 }
 
-@keyframes float-sparkle {
-  0%, 100% { transform: translateY(0px) scale(1); }
-  50% { transform: translateY(-15px) scale(1.2); }
+@keyframes pulse-slower {
+  0%, 100% { opacity: 0.3; transform: scale(1); }
+  50% { opacity: 0.6; transform: scale(1.15); }
 }
 
-@keyframes float-butterfly {
-  0%, 100% { transform: translateY(0px) translateX(0px); }
-  33% { transform: translateY(-10px) translateX(5px); }
-  66% { transform: translateY(-5px) translateX(-5px); }
+@keyframes float {
+  0%, 100% { transform: translate(-50%, -50%) translateY(0px); }
+  50% { transform: translate(-50%, -50%) translateY(-20px); }
 }
 
-@keyframes float-flower {
-  0%, 100% { transform: translateY(0px) rotate(0deg); }
-  50% { transform: translateY(-18px) rotate(180deg); }
+.animate-pulse-slow {
+  animation: pulse-slow 8s ease-in-out infinite;
 }
 
-@keyframes float-star {
-  0%, 100% { transform: translateY(0px) scale(1) rotate(0deg); }
-  50% { transform: translateY(-12px) scale(1.1) rotate(90deg); }
+.animate-pulse-slower {
+  animation: pulse-slower 10s ease-in-out infinite;
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
 }
 
 /* Main animations */
@@ -304,11 +278,11 @@ const submitForm = () => {
 @keyframes slide-down {
   0% {
     opacity: 0;
-    transform: translateY(-20px) scale(0.95);
+    transform: translateY(-20px);
   }
   100% {
     opacity: 1;
-    transform: translateY(0) scale(1);
+    transform: translateY(0);
   }
 }
 
@@ -364,7 +338,7 @@ const submitForm = () => {
 @keyframes button-appear {
   0% {
     opacity: 0;
-    transform: scale(0.9);
+    transform: scale(0.95);
   }
   100% {
     opacity: 1;
@@ -375,7 +349,7 @@ const submitForm = () => {
 @keyframes contact-item {
   0% {
     opacity: 0;
-    transform: translateX(20px);
+    transform: translateX(-20px);
   }
   100% {
     opacity: 1;
@@ -386,9 +360,9 @@ const submitForm = () => {
 @keyframes success-bounce {
   0% {
     opacity: 0;
-    transform: scale(0.8) translateY(20px);
+    transform: scale(0.9) translateY(20px);
   }
-  50% {
+  60% {
     transform: scale(1.05) translateY(-5px);
   }
   100% {
@@ -402,13 +376,12 @@ const submitForm = () => {
   100% { transform: translateX(200%) skewX(-12deg); }
 }
 
-/* Apply animations */
-.animate-float-hearts { animation: float-hearts 4s ease-in-out infinite; }
-.animate-float-sparkle { animation: float-sparkle 3s ease-in-out infinite; }
-.animate-float-butterfly { animation: float-butterfly 5s ease-in-out infinite; }
-.animate-float-flower { animation: float-flower 6s ease-in-out infinite; }
-.animate-float-star { animation: float-star 4.5s ease-in-out infinite; }
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
 
+/* Apply animations */
 .animate-fade-in-up {
   animation: fade-in-up 0.8s ease-out forwards;
   opacity: 0;
@@ -465,11 +438,6 @@ const submitForm = () => {
   animation: shimmer 1.5s ease-in-out;
 }
 
-/* Enhanced hover effects */
-.group:hover .group-hover\:scale-110 {
-  transform: scale(1.1);
-}
-
 .group:hover .group-hover\:animate-bounce {
   animation: bounce 0.6s ease-in-out;
 }
@@ -480,17 +448,17 @@ const submitForm = () => {
 }
 
 ::-webkit-scrollbar-track {
-  background: #f1f5f9;
+  background: #1e293b;
   border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(45deg, #f472b6, #ec4899);
+  background: linear-gradient(45deg, #06b6d4, #14b8a6);
   border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(45deg, #ec4899, #db2777);
+  background: linear-gradient(45deg, #0891b2, #0d9488);
 }
 
 /* Smooth scrolling */
@@ -498,15 +466,16 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Remove number input arrows */
-input[type="number"]::-webkit-inner-spin-button,
-input[type="number"]::-webkit-outer-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
+/* Focus styles */
+input:focus,
+textarea:focus {
+  box-shadow: 0 0 0 3px rgba(6, 182, 212, 0.1);
 }
 
-input[type="number"] {
-  appearance: textfield;
-  -moz-appearance: textfield;
+/* Disabled button state */
+button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none !important;
 }
 </style>

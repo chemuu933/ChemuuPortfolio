@@ -1,95 +1,105 @@
 <template>
-  <section id="skills" class="py-20 bg-gradient-to-br from-purple-100 via-pink-50 to-rose-100 relative overflow-hidden">
-    <!-- Floating decorative elements -->
-    <div class="absolute top-16 left-10 animate-float-1">
-      <div class="w-12 h-12 bg-gradient-to-br from-pink-300 to-rose-400 rounded-full opacity-20 blur-sm"></div>
-    </div>
-    <div class="absolute top-40 right-16 animate-float-2">
-      <div class="w-8 h-8 bg-gradient-to-br from-purple-300 to-pink-400 rounded-full opacity-25"></div>
-    </div>
-    <div class="absolute bottom-32 left-1/4 animate-float-3">
-      <div class="w-6 h-6 bg-gradient-to-br from-rose-300 to-pink-500 rounded-full opacity-30"></div>
-    </div>
-    <div class="absolute bottom-16 right-1/3 animate-float-4">
-      <div class="w-10 h-10 bg-gradient-to-br from-pink-400 to-purple-400 rounded-full opacity-15 blur-sm"></div>
+  <section id="skills" class="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 relative overflow-hidden">
+    <!-- Animated background particles -->
+    <div class="absolute inset-0 overflow-hidden">
+      <div v-for="i in 20" :key="`particle-${i}`" 
+           class="absolute w-1 h-1 bg-cyan-400 rounded-full particle"
+           :style="{
+             left: `${Math.random() * 100}%`,
+             top: `${Math.random() * 100}%`,
+             animationDelay: `${Math.random() * 5}s`,
+             animationDuration: `${3 + Math.random() * 4}s`
+           }">
+      </div>
     </div>
 
+    <!-- Glowing orbs -->
+    <div class="absolute top-20 left-10 w-64 h-64 bg-cyan-500/10 rounded-full blur-3xl animate-pulse-slow"></div>
+    <div class="absolute bottom-20 right-10 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl animate-pulse-slower"></div>
+
     <div class="container mx-auto px-6 relative z-10">
-      <div class="text-center mb-16 animate-fade-in-up">
-        <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4 animate-slide-down">
-          ✨ My Skills ✨
+      <div class="text-center mb-16 animate-fade-in-down">
+        <h2 class="text-4xl md:text-5xl font-bold text-white mb-4 tracking-tight">
+          Skills & Expertise
         </h2>
-        <div class="w-20 h-1 bg-gradient-to-r from-pink-400 via-rose-500 to-purple-500 mx-auto rounded-full animate-expand-line"></div>
-        <p class="text-gray-700 mt-6 max-w-2xl mx-auto text-lg animate-fade-in" style="animation-delay: 0.3s">
-          I've developed expertise in various technologies throughout my
-          education and personal projects. 🌸
+        <div class="w-24 h-1 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 mx-auto rounded-full animate-width-expand"></div>
+        <p class="text-slate-300 mt-6 max-w-2xl mx-auto text-lg">
+          Specialized in modern web technologies with a focus on creating exceptional digital experiences
         </p>
       </div>
 
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
-        <!-- Technical Skills -->
-        <div class="bg-white/70 backdrop-blur-sm rounded-2xl shadow-xl p-8 border border-white/50 animate-slide-in-left hover:shadow-2xl transition-all duration-500">
-          <div class="flex items-center mb-8">
-            <div class="w-12 h-12 bg-gradient-to-br from-pink-400 to-rose-500 rounded-xl flex items-center justify-center mr-4 animate-pulse-gentle">
-              <i class="fas fa-code text-white text-xl"></i>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
+        <!-- Skill Cards -->
+        <div
+          v-for="(category, index) in skillCategories"
+          :key="`category-${index}`"
+          class="skill-card bg-slate-800/50 backdrop-blur-lg rounded-2xl p-6 border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-500 animate-slide-up"
+          :style="{ animationDelay: `${index * 0.1}s` }"
+        >
+          <!-- Card Header -->
+          <div class="flex items-center mb-6">
+            <div class="w-16 h-16 rounded-xl bg-gradient-to-br flex items-center justify-center mr-4 animate-rotate-in"
+                 :class="category.gradient"
+                 :style="{ animationDelay: `${0.2 + index * 0.1}s` }">
+              <i :class="`${category.icon} text-white text-2xl`"></i>
             </div>
-            <h3 class="text-2xl font-semibold text-gray-800">
-              💻 Technical Skills
+            <h3 class="text-xl font-semibold text-white">
+              {{ category.title }}
             </h3>
           </div>
 
-          <div class="space-y-6">
+          <!-- Skills Progress Bars -->
+          <div class="space-y-4">
             <div
-              v-for="(skill, index) in technicalSkills"
-              :key="`tech-${index}`"
-              class="animate-skill-appear"
-              :style="{ animationDelay: `${0.1 * index}s` }"
+              v-for="(skill, skillIndex) in category.skills"
+              :key="`skill-${index}-${skillIndex}`"
+              class="skill-item"
+              :style="{ animationDelay: `${0.3 + index * 0.1 + skillIndex * 0.05}s` }"
             >
-              <div class="flex justify-between mb-3">
-                <span class="text-gray-800 font-medium text-lg">{{ skill.name }}</span>
-                <span class="text-pink-600 font-bold text-lg animate-number-count"
-                  >{{ skill.level }}%</span
-                >
+              <div class="flex justify-between mb-2">
+                <span class="text-slate-300 text-sm font-medium">{{ skill.name }}</span>
+                <span class="text-cyan-400 text-sm font-bold skill-percentage">{{ skill.level }}%</span>
               </div>
-              <div class="w-full bg-gray-200/60 rounded-full h-3 overflow-hidden shadow-inner">
+              <div class="w-full bg-slate-700/50 rounded-full h-2 overflow-hidden">
                 <div
-                  class="bg-gradient-to-r from-pink-400 via-rose-500 to-purple-500 h-3 rounded-full animate-progress-fill relative overflow-hidden"
+                  class="h-2 rounded-full progress-bar relative"
+                  :class="category.barGradient"
                   :style="{ 
-                    width: `${skill.level}%`,
-                    animationDelay: `${0.2 + (0.1 * index)}s`
+                    '--progress-width': `${skill.level}%`,
+                    animationDelay: `${0.5 + index * 0.1 + skillIndex * 0.05}s`
                   }"
                 >
-                  <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent animate-shimmer"></div>
+                  <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent shimmer"></div>
                 </div>
               </div>
             </div>
           </div>
         </div>
+      </div>
 
-        <!-- Additional Skills -->
-        <div class="bg-white/70 backdrop-blur-sm rounded-2xl shadow-xl p-8 border border-white/50 animate-slide-in-right hover:shadow-2xl transition-all duration-500">
-          <div class="flex items-center mb-8">
-            <div class="w-12 h-12 bg-gradient-to-br from-purple-400 to-pink-500 rounded-xl flex items-center justify-center mr-4 animate-pulse-gentle" style="animation-delay: 0.5s">
-              <i class="fas fa-star text-white text-xl"></i>
+      <!-- Additional Soft Skills Section -->
+      <div class="mt-12 animate-fade-in" style="animation-delay: 0.8s">
+        <div class="bg-slate-800/50 backdrop-blur-lg rounded-2xl p-8 border border-slate-700/50 max-w-7xl mx-auto">
+          <div class="flex items-center mb-6">
+            <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-purple-500 to-pink-600 flex items-center justify-center mr-4 animate-pulse-gentle">
+              <i class="fas fa-heart text-white text-xl"></i>
             </div>
-            <h3 class="text-2xl font-semibold text-gray-800">
-              🌟 Additional Skills
-            </h3>
+            <h3 class="text-2xl font-semibold text-white">Core Values</h3>
           </div>
-
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
             <div
-              v-for="(skill, index) in softSkills"
+              v-for="(skill, index) in additionalSoftSkills"
               :key="`soft-${index}`"
-              class="bg-white/80 backdrop-blur-sm rounded-xl p-4 shadow-lg flex items-center transition-all duration-300 hover:shadow-xl hover:-translate-y-1 hover:bg-white/90 animate-card-pop group cursor-pointer border border-white/30"
-              :style="{ animationDelay: `${0.05 * index}s` }"
+              class="soft-skill-badge bg-slate-700/30 backdrop-blur-sm rounded-xl p-6 border border-slate-600/50 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:-translate-y-1 cursor-pointer group"
+              :style="{ animationDelay: `${0.9 + index * 0.05}s` }"
             >
-              <div
-                class="w-12 h-12 rounded-xl bg-gradient-to-br from-pink-100 to-rose-200 flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300"
-              >
-                <i :class="`fas ${skill.icon} text-pink-600 text-lg`"></i>
+              <div class="flex flex-col items-center text-center">
+                <div class="w-16 h-16 rounded-lg bg-gradient-to-br from-cyan-500/20 to-blue-600/20 flex items-center justify-center mb-3 group-hover:scale-110 transition-transform duration-300">
+                  <i :class="`${skill.icon} text-cyan-400 text-2xl`"></i>
+                </div>
+                <span class="text-slate-300 text-sm font-medium group-hover:text-white transition-colors duration-300">{{ skill.name }}</span>
               </div>
-              <span class="text-gray-800 font-medium group-hover:text-gray-900 transition-colors duration-300">{{ skill.name }}</span>
             </div>
           </div>
         </div>
@@ -99,194 +109,206 @@
 </template>
 
 <script lang="ts" setup>
-const technicalSkills = [
-  { name: "HTML/CSS", level: 90 },
-  { name: "JavaScript", level: 85 },
-  { name: "React", level: 80 },
-  { name: "Vue.js", level: 75 },
-  { name: "Express.js", level: 70 },
-  { name: "Responsive Design", level: 85 },
+const skillCategories = [
+  {
+    title: "Frontend Development",
+    icon: "fas fa-code",
+    gradient: "from-cyan-500 to-blue-600",
+    barGradient: "bg-gradient-to-r from-cyan-400 to-blue-500",
+    skills: [
+      { name: "React & Next.js", level: 95 },
+      { name: "TypeScript", level: 90 },
+      { name: "TailwindCSS", level: 92 },
+      { name: "Vue.js", level: 85 },
+    ]
+  },
+  {
+    title: "Backend Development",
+    icon: "fas fa-server",
+    gradient: "from-blue-500 to-indigo-600",
+    barGradient: "bg-gradient-to-r from-blue-400 to-indigo-500",
+    skills: [
+      { name: "Node.js", level: 88 },
+      { name: "Python", level: 82 },
+      { name: "PostgreSQL", level: 85 },
+      { name: "MongoDB", level: 80 },
+    ]
+  },
+  {
+    title: "UI/UX Design",
+    icon: "fas fa-palette",
+    gradient: "from-purple-500 to-pink-600",
+    barGradient: "bg-gradient-to-r from-purple-400 to-pink-500",
+    skills: [
+      { name: "Figma", level: 93 },
+      { name: "Adobe XD", level: 87 },
+      { name: "Prototyping", level: 90 },
+      { name: "User Research", level: 85 },
+    ]
+  },
+  {
+    title: "DevOps & Tools",
+    icon: "fas fa-tools",
+    gradient: "from-emerald-500 to-teal-600",
+    barGradient: "bg-gradient-to-r from-emerald-400 to-teal-500",
+    skills: [
+      { name: "Git & GitHub", level: 90 },
+      { name: "Docker", level: 78 },
+      { name: "CI/CD", level: 75 },
+      { name: "AWS", level: 72 },
+    ]
+  },
+  {
+    title: "Soft Skills",
+    icon: "fas fa-users",
+    gradient: "from-purple-500 to-pink-600",
+    barGradient: "bg-gradient-to-r from-purple-400 to-pink-500",
+    skills: [
+      { name: "Leadership", level: 90 },
+      { name: "Communication", level: 95 },
+      { name: "Problem Solving", level: 92 },
+      { name: "Team Collaboration", level: 88 },
+    ]
+  },
 ];
 
-const softSkills = [
-  { name: "Problem Solving", icon: "fa-lightbulb" },
-  { name: "Team Collaboration", icon: "fa-users" },
-  { name: "Git/Version Control", icon: "fa-code-branch" },
-  { name: "UI/UX Design", icon: "fa-pencil-ruler" },
-  { name: "Database Management", icon: "fa-database" },
-  { name: "Communication", icon: "fa-comments" },
-  { name: "Time Management", icon: "fa-clock" },
-  { name: "Leadership", icon: "fa-crown" },
-  { name: "Adaptability", icon: "fa-sync-alt" },
-  { name: "Code Review", icon: "fa-check-circle" },
-  { name: "RESTful APIs", icon: "fa-server" },
-  { name: "Testing/Debugging", icon: "fa-bug" },
+const additionalSoftSkills = [
+  { name: "Creativity", icon: "fas fa-lightbulb" },
+  { name: "Time Management", icon: "fas fa-clock" },
+  { name: "Adaptability", icon: "fas fa-sync-alt" },
+  { name: "Innovation", icon: "fas fa-rocket" },
 ];
 </script>
 
 <style scoped>
-@keyframes float-1 {
-  0%, 100% { transform: translateY(0px) rotate(0deg); }
-  50% { transform: translateY(-20px) rotate(180deg); }
-}
-
-@keyframes float-2 {
-  0%, 100% { transform: translateY(0px) scale(1); }
-  50% { transform: translateY(-15px) scale(1.1); }
-}
-
-@keyframes float-3 {
-  0%, 100% { transform: translateY(0px) translateX(0px); }
-  33% { transform: translateY(-10px) translateX(5px); }
-  66% { transform: translateY(-5px) translateX(-5px); }
-}
-
-@keyframes float-4 {
-  0%, 100% { transform: translateY(0px) rotate(0deg) scale(1); }
-  50% { transform: translateY(-25px) rotate(90deg) scale(1.2); }
-}
-
-@keyframes fade-in-up {
-  0% {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes slide-down {
-  0% {
-    opacity: 0;
-    transform: translateY(-20px) scale(0.95);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-  }
-}
-
-@keyframes expand-line {
-  0% {
-    width: 0;
+/* Particle Animation */
+@keyframes float-particle {
+  0%, 100% {
+    transform: translateY(0) translateX(0);
     opacity: 0;
   }
-  100% {
-    width: 5rem;
+  10% {
     opacity: 1;
   }
-}
-
-@keyframes fade-in {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
-}
-
-@keyframes slide-in-left {
-  0% {
-    opacity: 0;
-    transform: translateX(-50px);
-  }
-  100% {
+  90% {
     opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes slide-in-right {
-  0% {
-    opacity: 0;
-    transform: translateX(50px);
   }
   100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes skill-appear {
-  0% {
+    transform: translateY(-100vh) translateX(20px);
     opacity: 0;
-    transform: translateY(20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
   }
 }
 
-@keyframes progress-fill {
-  0% {
-    width: 0;
-  }
-  100% {
-    /* Width is set via inline styles */
-  }
+.particle {
+  animation: float-particle 7s ease-in-out infinite;
 }
 
-@keyframes shimmer {
-  0% { transform: translateX(-100%); }
-  100% { transform: translateX(100%); }
-}
-
-@keyframes number-count {
-  0% {
-    transform: scale(0.8);
-    opacity: 0;
+/* Pulse Animations */
+@keyframes pulse-slow {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(1);
   }
   50% {
+    opacity: 0.5;
     transform: scale(1.1);
   }
-  100% {
+}
+
+@keyframes pulse-slower {
+  0%, 100% {
+    opacity: 0.2;
     transform: scale(1);
-    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+    transform: scale(1.15);
   }
 }
 
-@keyframes card-pop {
+.animate-pulse-slow {
+  animation: pulse-slow 8s ease-in-out infinite;
+}
+
+.animate-pulse-slower {
+  animation: pulse-slower 10s ease-in-out infinite;
+}
+
+/* Fade In Down */
+@keyframes fade-in-down {
   0% {
     opacity: 0;
-    transform: scale(0.8) translateY(20px);
+    transform: translateY(-30px);
   }
   100% {
     opacity: 1;
-    transform: scale(1) translateY(0);
+    transform: translateY(0);
   }
 }
 
-@keyframes pulse-gentle {
-  0%, 100% { 
-    transform: scale(1);
-    box-shadow: 0 0 0 0 rgba(236, 72, 153, 0.4);
-  }
-  50% { 
-    transform: scale(1.05);
-    box-shadow: 0 0 0 10px rgba(236, 72, 153, 0);
-  }
-}
-
-/* Apply animations */
-.animate-float-1 { animation: float-1 6s ease-in-out infinite; }
-.animate-float-2 { animation: float-2 4s ease-in-out infinite; }
-.animate-float-3 { animation: float-3 5s ease-in-out infinite; }
-.animate-float-4 { animation: float-4 7s ease-in-out infinite; }
-
-.animate-fade-in-up {
-  animation: fade-in-up 0.8s ease-out forwards;
+.animate-fade-in-down {
+  animation: fade-in-down 0.8s ease-out forwards;
   opacity: 0;
 }
 
-.animate-slide-down {
-  animation: slide-down 0.8s ease-out forwards;
-  opacity: 0;
+/* Width Expand */
+@keyframes width-expand {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 6rem;
+  }
 }
 
-.animate-expand-line {
-  animation: expand-line 1s ease-out forwards;
+.animate-width-expand {
+  animation: width-expand 1s ease-out forwards;
   animation-delay: 0.5s;
   width: 0;
+}
+
+/* Slide Up */
+@keyframes slide-up {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slide-up {
+  animation: slide-up 0.6s ease-out forwards;
+  opacity: 0;
+}
+
+/* Rotate In */
+@keyframes rotate-in {
+  0% {
+    opacity: 0;
+    transform: rotate(-180deg) scale(0);
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(0) scale(1);
+  }
+}
+
+.animate-rotate-in {
+  animation: rotate-in 0.6s ease-out forwards;
+  opacity: 0;
+}
+
+/* Fade In */
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .animate-fade-in {
@@ -294,56 +316,151 @@ const softSkills = [
   opacity: 0;
 }
 
-.animate-slide-in-left {
-  animation: slide-in-left 1s ease-out forwards;
-  animation-delay: 0.2s;
-  opacity: 0;
+/* Progress Bar Animation */
+@keyframes progress-fill {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: var(--progress-width);
+  }
 }
 
-.animate-slide-in-right {
-  animation: slide-in-right 1s ease-out forwards;
-  animation-delay: 0.4s;
-  opacity: 0;
-}
-
-.animate-skill-appear {
-  animation: skill-appear 0.6s ease-out forwards;
-  opacity: 0;
-}
-
-.animate-progress-fill {
-  animation: progress-fill 1.5s ease-out forwards;
+.progress-bar {
+  animation: progress-fill 1.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
   width: 0;
 }
 
-.animate-shimmer {
-  animation: shimmer 2s ease-in-out infinite;
-  animation-delay: 1s;
+/* Shimmer Effect */
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(200%);
+  }
 }
 
-.animate-number-count {
-  animation: number-count 0.6s ease-out forwards;
-  animation-delay: 0.8s;
+.shimmer {
+  animation: shimmer 2.5s ease-in-out infinite;
 }
 
-.animate-card-pop {
-  animation: card-pop 0.5s ease-out forwards;
+/* Skill Item Animation */
+@keyframes skill-appear {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.skill-item {
+  animation: skill-appear 0.5s ease-out forwards;
   opacity: 0;
+}
+
+/* Percentage Counter Animation */
+@keyframes count-up {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.skill-percentage {
+  animation: count-up 0.5s ease-out forwards;
+}
+
+/* Soft Skills Badge Animation */
+@keyframes badge-pop {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.soft-skill-badge {
+  animation: badge-pop 0.4s ease-out forwards;
+  opacity: 0;
+}
+
+/* Gentle Pulse */
+@keyframes pulse-gentle {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(168, 85, 247, 0.4);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 10px rgba(168, 85, 247, 0);
+  }
 }
 
 .animate-pulse-gentle {
   animation: pulse-gentle 2s ease-in-out infinite;
 }
 
-/* Responsive improvements */
-@media (max-width: 640px) {
-  .grid-cols-1.sm\:grid-cols-2 {
-    grid-template-columns: 1fr;
+/* Card Hover Effect */
+.skill-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.skill-card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(34, 211, 238, 0.1) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.skill-card:hover::before {
+  opacity: 1;
+  animation: glow-rotate 3s linear infinite;
+}
+
+@keyframes glow-rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }
 
-/* Enhanced hover effects */
-.group:hover .group-hover\:scale-110 {
-  transform: scale(1.1);
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(15, 23, 42, 0.5);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(34, 211, 238, 0.3);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(34, 211, 238, 0.5);
 }
 </style>
