@@ -3,27 +3,7 @@
 # ChemuuPortfolio
 
 A personal portfolio website built with Vue to showcase projects, skills, résumé, and contact information. Clean, responsive, and easy to customize.
-
-## Table of contents
-- [Features](#features)
-- [Tech stack](#tech-stack)
-- [Demo](#demo)
-- [Getting started](#getting-started)
-  - [Prerequisites](#prerequisites)
-  - [Install](#install)
-  - [Run locally](#run-locally)
-  - [Build for production](#build-for-production)
-- [Project structure](#project-structure)
-- [Customize content](#customize-content)
-- [Deployment](#deployment)
-  - [GitHub Pages (gh-pages)](#github-pages-gh-pages)
-  - [Netlify / Vercel](#netlify--vercel)
-- [Environment variables](#environment-variables)
-- [Contributing](#contributing)
-- [Troubleshooting](#troubleshooting)
-- [License](#license)
-- [Author / Contact](#author--contact)
-
+  
 ## Features
 - Project gallery with links and descriptions
 - Skills / technologies section
