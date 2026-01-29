@@ -1,62 +1,47 @@
 <template>
   <section
     id="about"
-    class="py-20 bg-gradient-to-br from-purple-500 via-rose-100 to-purple-500 relative overflow-hidden"
+    class="py-20 bg-gradient-to-br from-teal-900 via-slate-800 to-emerald-900 relative overflow-hidden"
   >
     <!-- Floating decorative elements -->
     <div class="absolute top-10 left-10 animate-float-slow">
-      <div class="w-8 h-8 bg-pink-300 rounded-full opacity-30"></div>
+      <div class="w-8 h-8 bg-teal-400 rounded-full opacity-20"></div>
     </div>
     <div class="absolute top-32 right-20 animate-float-medium">
-      <div class="w-6 h-6 bg-rose-400 rounded-full opacity-40"></div>
+      <div class="w-6 h-6 bg-emerald-400 rounded-full opacity-25"></div>
     </div>
     <div class="absolute bottom-20 left-1/4 animate-float-fast">
-      <div class="w-4 h-4 bg-pink-400 rounded-full opacity-35"></div>
+      <div class="w-4 h-4 bg-cyan-400 rounded-full opacity-20"></div>
+    </div>
+    <div class="absolute bottom-40 right-1/3 animate-float-slow">
+      <div class="w-5 h-5 bg-teal-300 rounded-full opacity-15"></div>
     </div>
 
     <div class="container mx-auto px-6 relative z-10">
       <div class="text-center mb-16 animate-fade-in-up">
         <h2
-          class="text-3xl md:text-4xl font-bold text-gray-800 mb-4 animate-slide-in-title"
+          class="text-3xl md:text-4xl font-bold text-white mb-4 animate-slide-in-title"
         >
           ✨ About Me ✨
         </h2>
         <div
-          class="w-20 h-1 bg-gradient-to-r from-pink-400 to-rose-500 mx-auto rounded-full animate-expand-line"
+          class="w-20 h-1 bg-gradient-to-r from-teal-400 to-emerald-400 mx-auto rounded-full animate-expand-line"
         ></div>
       </div>
 
-      <div class="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
-        <div class="lg:w-1/2 mb-10 lg:mb-0 animate-slide-in-left">
-          <div class="relative group">
-            <div
-              class="absolute -inset-4 bg-gradient-to-r from-pink-400 to-rose-500 rounded-2xl blur-xl opacity-30 group-hover:opacity-50 transition-opacity duration-500 animate-pulse-bg"
-            ></div>
-            <img
-              :src="aboutImageUrl"
-              alt="Christine working on code"
-              class="relative rounded-2xl shadow-2xl w-full h-auto max-w-md mx-auto object-cover object-top transform hover:scale-105 transition-transform duration-500 border-4 border-white"
-            />
-            <div
-              class="absolute top-4 right-4 bg-white bg-opacity-90 rounded-full p-2 animate-bounce-gentle"
-            >
-              <span class="text-2xl">💖</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="lg:w-1/2 animate-slide-in-right">
+      <div class="max-w-4xl mx-auto">
+        <div class="animate-slide-in-up">
           <h3
-            class="text-2xl md:text-3xl font-semibold text-gray-800 mb-6 animate-fade-in-up"
+            class="text-2xl md:text-3xl font-semibold text-teal-300 mb-6 animate-fade-in-up"
             style="animation-delay: 0.2s"
           >
             🌸 Who I Am
           </h3>
           <p
-            class="text-gray-700 mb-6 leading-relaxed text-base md:text-lg animate-fade-in-up hover:text-gray-800 transition-colors duration-300"
+            class="text-gray-200 mb-6 leading-relaxed text-base md:text-lg animate-fade-in-up hover:text-white transition-colors duration-300"
             style="animation-delay: 0.3s"
           >
-            I’m Christine, an ambitious IT professional passionate about
+            I'm Christine, an ambitious IT professional passionate about
             creating meaningful digital experiences through code. My technology
             journey started with a curiosity about how websites work, which led
             me to pursue formal education in Information Technology at Kabarak
@@ -64,7 +49,7 @@
             practical application.. 💻
           </p>
           <p
-            class="text-gray-700 mb-6 leading-relaxed text-base md:text-lg animate-fade-in-up hover:text-gray-800 transition-colors duration-300"
+            class="text-gray-200 mb-6 leading-relaxed text-base md:text-lg animate-fade-in-up hover:text-white transition-colors duration-300"
             style="animation-delay: 0.4s"
           >
             I specialize in frontend development, thriving on the challenge of
@@ -73,7 +58,7 @@
             complemented by backend experience with Node.js and Express.js.. ✨
           </p>
           <p
-            class="text-gray-700 mb-8 leading-relaxed text-base md:text-lg animate-fade-in-up hover:text-gray-800 transition-colors duration-300"
+            class="text-gray-200 mb-8 leading-relaxed text-base md:text-lg animate-fade-in-up hover:text-white transition-colors duration-300"
             style="animation-delay: 0.5s"
           >
             Beyond building applications, I am committed to continuous
@@ -85,41 +70,77 @@
           </p>
 
           <div
-            class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 animate-fade-in-up"
+            class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-10 animate-fade-in-up"
             style="animation-delay: 0.6s"
           >
             <div
-              class="flex items-center bg-white bg-opacity-80 backdrop-blur-sm px-4 py-3 rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 animate-card-hover group"
+              class="flex items-center bg-white bg-opacity-10 backdrop-blur-sm px-4 py-3 rounded-xl shadow-lg hover:shadow-2xl hover:bg-opacity-15 transform hover:-translate-y-1 transition-all duration-300 animate-card-hover group border border-teal-500 border-opacity-20"
             >
               <i
-                class="fas fa-graduation-cap text-pink-500 mr-3 text-lg group-hover:scale-110 transition-transform duration-300"
+                class="fas fa-graduation-cap text-teal-400 mr-3 text-lg group-hover:scale-110 transition-transform duration-300"
               ></i>
-              <span class="text-gray-800 font-medium text-sm md:text-base"
+              <span class="text-gray-100 font-medium text-sm md:text-base"
                 >IT Professional</span
               >
             </div>
             <div
-              class="flex items-center bg-white bg-opacity-80 backdrop-blur-sm px-4 py-3 rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 animate-card-hover group"
+              class="flex items-center bg-white bg-opacity-10 backdrop-blur-sm px-4 py-3 rounded-xl shadow-lg hover:shadow-2xl hover:bg-opacity-15 transform hover:-translate-y-1 transition-all duration-300 animate-card-hover group border border-emerald-500 border-opacity-20"
               style="animation-delay: 0.1s"
             >
               <i
-                class="fas fa-code text-rose-500 mr-3 text-lg group-hover:scale-110 transition-transform duration-300"
+                class="fas fa-code text-emerald-400 mr-3 text-lg group-hover:scale-110 transition-transform duration-300"
               ></i>
-              <span class="text-gray-800 font-medium text-sm md:text-base"
+              <span class="text-gray-100 font-medium text-sm md:text-base"
                 >Frontend Developer</span
               >
             </div>
             <div
-              class="flex items-center bg-white bg-opacity-80 backdrop-blur-sm px-4 py-3 rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 animate-card-hover group sm:col-span-2 lg:col-span-1"
+              class="flex items-center bg-white bg-opacity-10 backdrop-blur-sm px-4 py-3 rounded-xl shadow-lg hover:shadow-2xl hover:bg-opacity-15 transform hover:-translate-y-1 transition-all duration-300 animate-card-hover group sm:col-span-2 lg:col-span-1 border border-cyan-500 border-opacity-20"
               style="animation-delay: 0.2s"
             >
               <i
-                class="fas fa-pencil-alt text-pink-400 mr-3 text-lg group-hover:scale-110 transition-transform duration-300"
+                class="fas fa-pencil-alt text-cyan-400 mr-3 text-lg group-hover:scale-110 transition-transform duration-300"
               ></i>
-              <span class="text-gray-800 font-medium text-sm md:text-base"
+              <span class="text-gray-100 font-medium text-sm md:text-base"
                 >UI/UX Designer</span
               >
             </div>
+          </div>
+
+          <!-- Action Buttons -->
+          <div
+            class="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in-up"
+            style="animation-delay: 0.7s"
+          >
+            <button
+              class="group relative px-8 py-4 bg-gradient-to-r from-teal-500 to-emerald-500 text-white font-semibold rounded-full overflow-hidden transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-2xl animate-pulse-glow"
+            >
+              <span class="relative z-10 flex items-center gap-2">
+                <i class="fas fa-envelope animate-swing"></i>
+                Get in Touch
+              </span>
+              <div
+                class="absolute inset-0 bg-gradient-to-r from-emerald-500 to-teal-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              ></div>
+              <div
+                class="absolute inset-0 bg-white opacity-0 group-hover:opacity-20 animate-shimmer"
+              ></div>
+            </button>
+
+            <button
+              class="group relative px-8 py-4 bg-transparent text-teal-300 font-semibold rounded-full border-2 border-teal-400 overflow-hidden transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-2xl animate-border-glow"
+            >
+              <span class="relative z-10 flex items-center gap-2">
+                <i class="fas fa-file-download animate-bounce-subtle"></i>
+                View Resume
+              </span>
+              <div
+                class="absolute inset-0 bg-gradient-to-r from-teal-500 to-emerald-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              ></div>
+              <span
+                class="absolute inset-0 border-2 border-teal-300 rounded-full animate-ping-slow opacity-20"
+              ></span>
+            </button>
           </div>
         </div>
       </div>
@@ -128,8 +149,7 @@
 </template>
 
 <script lang="ts" setup>
-const aboutImageUrl =
-  "https://readdy.ai/api/search-image?query=young%20woman%20coding%20on%20laptop%20in%20modern%20workspace%2C%20focused%20on%20screen%20showing%20code%2C%20professional%20setting%2C%20soft%20natural%20lighting%2C%20high%20quality%2C%20tech%20environment&width=600&height=400&seq=3&orientation=landscape";
+// Component logic can be added here if needed
 </script>
 
 <style scoped>
@@ -174,25 +194,14 @@ const aboutImageUrl =
   }
 }
 
-@keyframes slide-in-left {
+@keyframes slide-in-up {
   0% {
     opacity: 0;
-    transform: translateX(-50px);
+    transform: translateY(50px);
   }
   100% {
     opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes slide-in-right {
-  0% {
-    opacity: 0;
-    transform: translateX(50px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
+    transform: translateY(0);
   }
 }
 
@@ -218,36 +227,6 @@ const aboutImageUrl =
   }
 }
 
-@keyframes bounce-gentle {
-  0%,
-  20%,
-  53%,
-  80%,
-  100% {
-    transform: translate3d(0, 0, 0) rotate(0deg);
-  }
-  40%,
-  43% {
-    transform: translate3d(0, -8px, 0) rotate(5deg);
-  }
-  70% {
-    transform: translate3d(0, -4px, 0) rotate(-3deg);
-  }
-  90% {
-    transform: translate3d(0, -2px, 0) rotate(1deg);
-  }
-}
-
-@keyframes pulse-bg {
-  0%,
-  100% {
-    opacity: 0.3;
-  }
-  50% {
-    opacity: 0.5;
-  }
-}
-
 @keyframes card-hover {
   0% {
     opacity: 0;
@@ -256,6 +235,73 @@ const aboutImageUrl =
   100% {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@keyframes pulse-glow {
+  0%,
+  100% {
+    box-shadow: 0 0 20px rgba(20, 184, 166, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(16, 185, 129, 0.8);
+  }
+}
+
+@keyframes border-glow {
+  0%,
+  100% {
+    box-shadow: 0 0 15px rgba(20, 184, 166, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(20, 184, 166, 0.6);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes swing {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-10deg);
+  }
+  75% {
+    transform: rotate(10deg);
+  }
+}
+
+@keyframes bounce-subtle {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
+}
+
+@keyframes ping-slow {
+  0% {
+    transform: scale(1);
+    opacity: 0.2;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1.1);
+    opacity: 0;
   }
 }
 
@@ -276,13 +322,8 @@ const aboutImageUrl =
   opacity: 0;
 }
 
-.animate-slide-in-left {
-  animation: slide-in-left 1s ease-out forwards;
-  opacity: 0;
-}
-
-.animate-slide-in-right {
-  animation: slide-in-right 1s ease-out forwards;
+.animate-slide-in-up {
+  animation: slide-in-up 1s ease-out forwards;
   opacity: 0;
 }
 
@@ -296,17 +337,33 @@ const aboutImageUrl =
   width: 0;
 }
 
-.animate-bounce-gentle {
-  animation: bounce-gentle 3s infinite;
-}
-
-.animate-pulse-bg {
-  animation: pulse-bg 3s ease-in-out infinite;
-}
-
 .animate-card-hover {
   animation: card-hover 0.6s ease-out forwards;
   opacity: 0;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+.animate-border-glow {
+  animation: border-glow 2s ease-in-out infinite;
+}
+
+.animate-shimmer {
+  animation: shimmer 2s infinite;
+}
+
+.animate-swing {
+  animation: swing 2s ease-in-out infinite;
+}
+
+.animate-bounce-subtle {
+  animation: bounce-subtle 1.5s ease-in-out infinite;
+}
+
+.animate-ping-slow {
+  animation: ping-slow 3s cubic-bezier(0, 0, 0.2, 1) infinite;
 }
 
 /* Responsive improvements */

@@ -1,34 +1,50 @@
 <template>
-  <section id="skills" class="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 relative overflow-hidden">
+  <section
+    id="skills"
+    class="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 relative overflow-hidden"
+  >
     <!-- Animated background particles -->
     <div class="absolute inset-0 overflow-hidden">
-      <div v-for="i in 20" :key="`particle-${i}`" 
-           class="absolute w-1 h-1 bg-cyan-400 rounded-full particle"
-           :style="{
-             left: `${Math.random() * 100}%`,
-             top: `${Math.random() * 100}%`,
-             animationDelay: `${Math.random() * 5}s`,
-             animationDuration: `${3 + Math.random() * 4}s`
-           }">
-      </div>
+      <div
+        v-for="i in 20"
+        :key="`particle-${i}`"
+        class="absolute w-1 h-1 bg-cyan-400 rounded-full particle"
+        :style="{
+          left: `${Math.random() * 100}%`,
+          top: `${Math.random() * 100}%`,
+          animationDelay: `${Math.random() * 5}s`,
+          animationDuration: `${3 + Math.random() * 4}s`,
+        }"
+      ></div>
     </div>
 
     <!-- Glowing orbs -->
-    <div class="absolute top-20 left-10 w-64 h-64 bg-cyan-500/10 rounded-full blur-3xl animate-pulse-slow"></div>
-    <div class="absolute bottom-20 right-10 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl animate-pulse-slower"></div>
+    <div
+      class="absolute top-20 left-10 w-64 h-64 bg-cyan-500/10 rounded-full blur-3xl animate-pulse-slow"
+    ></div>
+    <div
+      class="absolute bottom-20 right-10 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl animate-pulse-slower"
+    ></div>
 
     <div class="container mx-auto px-6 relative z-10">
       <div class="text-center mb-16 animate-fade-in-down">
-        <h2 class="text-4xl md:text-5xl font-bold text-white mb-4 tracking-tight">
+        <h2
+          class="text-4xl md:text-5xl font-bold text-white mb-4 tracking-tight"
+        >
           Skills & Expertise
         </h2>
-        <div class="w-24 h-1 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 mx-auto rounded-full animate-width-expand"></div>
+        <div
+          class="w-24 h-1 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 mx-auto rounded-full animate-width-expand"
+        ></div>
         <p class="text-slate-300 mt-6 max-w-2xl mx-auto text-lg">
-          Specialized in modern web technologies with a focus on creating exceptional digital experiences
+          Specialized in modern web technologies with a focus on creating
+          exceptional digital experiences
         </p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto"
+      >
         <!-- Skill Cards -->
         <div
           v-for="(category, index) in skillCategories"
@@ -38,9 +54,11 @@
         >
           <!-- Card Header -->
           <div class="flex items-center mb-6">
-            <div class="w-16 h-16 rounded-xl bg-gradient-to-br flex items-center justify-center mr-4 animate-rotate-in"
-                 :class="category.gradient"
-                 :style="{ animationDelay: `${0.2 + index * 0.1}s` }">
+            <div
+              class="w-16 h-16 rounded-xl bg-gradient-to-br flex items-center justify-center mr-4 animate-rotate-in"
+              :class="category.gradient"
+              :style="{ animationDelay: `${0.2 + index * 0.1}s` }"
+            >
               <i :class="`${category.icon} text-white text-2xl`"></i>
             </div>
             <h3 class="text-xl font-semibold text-white">
@@ -54,51 +72,33 @@
               v-for="(skill, skillIndex) in category.skills"
               :key="`skill-${index}-${skillIndex}`"
               class="skill-item"
-              :style="{ animationDelay: `${0.3 + index * 0.1 + skillIndex * 0.05}s` }"
+              :style="{
+                animationDelay: `${0.3 + index * 0.1 + skillIndex * 0.05}s`,
+              }"
             >
               <div class="flex justify-between mb-2">
-                <span class="text-slate-300 text-sm font-medium">{{ skill.name }}</span>
-                <span class="text-cyan-400 text-sm font-bold skill-percentage">{{ skill.level }}%</span>
+                <span class="text-slate-300 text-sm font-medium">{{
+                  skill.name
+                }}</span>
+                <span class="text-cyan-400 text-sm font-bold skill-percentage"
+                  >{{ skill.level }}%</span
+                >
               </div>
-              <div class="w-full bg-slate-700/50 rounded-full h-2 overflow-hidden">
+              <div
+                class="w-full bg-slate-700/50 rounded-full h-2 overflow-hidden"
+              >
                 <div
                   class="h-2 rounded-full progress-bar relative"
                   :class="category.barGradient"
-                  :style="{ 
+                  :style="{
                     '--progress-width': `${skill.level}%`,
-                    animationDelay: `${0.5 + index * 0.1 + skillIndex * 0.05}s`
+                    animationDelay: `${0.5 + index * 0.1 + skillIndex * 0.05}s`,
                   }"
                 >
-                  <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent shimmer"></div>
+                  <div
+                    class="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent shimmer"
+                  ></div>
                 </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Additional Soft Skills Section -->
-      <div class="mt-12 animate-fade-in" style="animation-delay: 0.8s">
-        <div class="bg-slate-800/50 backdrop-blur-lg rounded-2xl p-8 border border-slate-700/50 max-w-7xl mx-auto">
-          <div class="flex items-center mb-6">
-            <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-purple-500 to-pink-600 flex items-center justify-center mr-4 animate-pulse-gentle">
-              <i class="fas fa-heart text-white text-xl"></i>
-            </div>
-            <h3 class="text-2xl font-semibold text-white">Core Values</h3>
-          </div>
-          
-          <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-            <div
-              v-for="(skill, index) in additionalSoftSkills"
-              :key="`soft-${index}`"
-              class="soft-skill-badge bg-slate-700/30 backdrop-blur-sm rounded-xl p-6 border border-slate-600/50 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:-translate-y-1 cursor-pointer group"
-              :style="{ animationDelay: `${0.9 + index * 0.05}s` }"
-            >
-              <div class="flex flex-col items-center text-center">
-                <div class="w-16 h-16 rounded-lg bg-gradient-to-br from-cyan-500/20 to-blue-600/20 flex items-center justify-center mb-3 group-hover:scale-110 transition-transform duration-300">
-                  <i :class="`${skill.icon} text-cyan-400 text-2xl`"></i>
-                </div>
-                <span class="text-slate-300 text-sm font-medium group-hover:text-white transition-colors duration-300">{{ skill.name }}</span>
               </div>
             </div>
           </div>
@@ -116,11 +116,11 @@ const skillCategories = [
     gradient: "from-cyan-500 to-blue-600",
     barGradient: "bg-gradient-to-r from-cyan-400 to-blue-500",
     skills: [
-      { name: "React & Next.js", level: 95 },
-      { name: "TypeScript", level: 90 },
+      { name: "Html/css", level: 95 },
+      { name: "React & TypeScript", level: 90 },
       { name: "TailwindCSS", level: 92 },
       { name: "Vue.js", level: 85 },
-    ]
+    ],
   },
   {
     title: "Backend Development",
@@ -129,10 +129,10 @@ const skillCategories = [
     barGradient: "bg-gradient-to-r from-blue-400 to-indigo-500",
     skills: [
       { name: "Node.js", level: 88 },
-      { name: "Python", level: 82 },
-      { name: "PostgreSQL", level: 85 },
-      { name: "MongoDB", level: 80 },
-    ]
+      { name: "express.js", level: 82 },
+      { name: "python", level: 85 },
+      { name: "PostgreSQl", level: 80 },
+    ],
   },
   {
     title: "UI/UX Design",
@@ -142,9 +142,9 @@ const skillCategories = [
     skills: [
       { name: "Figma", level: 93 },
       { name: "Adobe XD", level: 87 },
-      { name: "Prototyping", level: 90 },
+      { name: "canva", level: 90 },
       { name: "User Research", level: 85 },
-    ]
+    ],
   },
   {
     title: "DevOps & Tools",
@@ -156,7 +156,7 @@ const skillCategories = [
       { name: "Docker", level: 78 },
       { name: "CI/CD", level: 75 },
       { name: "AWS", level: 72 },
-    ]
+    ],
   },
   {
     title: "Soft Skills",
@@ -168,22 +168,16 @@ const skillCategories = [
       { name: "Communication", level: 95 },
       { name: "Problem Solving", level: 92 },
       { name: "Team Collaboration", level: 88 },
-    ]
+    ],
   },
-];
-
-const additionalSoftSkills = [
-  { name: "Creativity", icon: "fas fa-lightbulb" },
-  { name: "Time Management", icon: "fas fa-clock" },
-  { name: "Adaptability", icon: "fas fa-sync-alt" },
-  { name: "Innovation", icon: "fas fa-rocket" },
 ];
 </script>
 
 <style scoped>
 /* Particle Animation */
 @keyframes float-particle {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0) translateX(0);
     opacity: 0;
   }
@@ -205,7 +199,8 @@ const additionalSoftSkills = [
 
 /* Pulse Animations */
 @keyframes pulse-slow {
-  0%, 100% {
+  0%,
+  100% {
     opacity: 0.3;
     transform: scale(1);
   }
@@ -216,7 +211,8 @@ const additionalSoftSkills = [
 }
 
 @keyframes pulse-slower {
-  0%, 100% {
+  0%,
+  100% {
     opacity: 0.2;
     transform: scale(1);
   }
@@ -400,7 +396,8 @@ const additionalSoftSkills = [
 
 /* Gentle Pulse */
 @keyframes pulse-gentle {
-  0%, 100% {
+  0%,
+  100% {
     transform: scale(1);
     box-shadow: 0 0 0 0 rgba(168, 85, 247, 0.4);
   }
@@ -421,13 +418,17 @@ const additionalSoftSkills = [
 }
 
 .skill-card::before {
-  content: '';
+  content: "";
   position: absolute;
   top: -50%;
   left: -50%;
   width: 200%;
   height: 200%;
-  background: radial-gradient(circle, rgba(34, 211, 238, 0.1) 0%, transparent 70%);
+  background: radial-gradient(
+    circle,
+    rgba(34, 211, 238, 0.1) 0%,
+    transparent 70%
+  );
   opacity: 0;
   transition: opacity 0.5s ease;
 }

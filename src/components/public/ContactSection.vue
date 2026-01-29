@@ -82,18 +82,18 @@
                   <i class="fab fa-linkedin-in text-lg group-hover:animate-bounce"></i>
                 </a>
                 <a
-                  href="https://twitter.com/"
+                  href="https://instagram.com/"
                   target="_blank"
                   class="w-12 h-12 rounded-xl bg-slate-700/50 hover:bg-slate-600 border border-slate-600/50 hover:border-cyan-500/50 flex items-center justify-center text-gray-300 hover:text-cyan-400 transition-all duration-300 transform hover:scale-110 hover:shadow-lg hover:shadow-cyan-500/20 group"
                 >
-                  <i class="fab fa-twitter text-lg group-hover:animate-bounce"></i>
+                  <i class="fab fa-instagram text-lg group-hover:animate-bounce"></i>
                 </a>
                 <a
-                  href="https://dribbble.com/"
+                  href="https://tiktok.com/"
                   target="_blank"
                   class="w-12 h-12 rounded-xl bg-slate-700/50 hover:bg-slate-600 border border-slate-600/50 hover:border-cyan-500/50 flex items-center justify-center text-gray-300 hover:text-cyan-400 transition-all duration-300 transform hover:scale-110 hover:shadow-lg hover:shadow-cyan-500/20 group"
                 >
-                  <i class="fab fa-dribbble text-lg group-hover:animate-bounce"></i>
+                  <i class="fab fa-tiktok text-lg group-hover:animate-bounce"></i>
                 </a>
               </div>
             </div>

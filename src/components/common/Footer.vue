@@ -1,10 +1,10 @@
 <template>
-     <footer class="bg-gradient-to-r from-pink-900 to-purple-900 text-white py-12">
+     <footer class="bg-gradient-to-r from-teal-900 via-teal-900 to-blue-900 text-white py-12">
       <div class="container mx-auto px-6">
         <div class="flex flex-col md:flex-row justify-between items-center">
           <div class="mb-6 md:mb-0">
             <div class="text-2xl font-bold mb-2 text-pink-200">Christine</div>
-            <p class="text-purple-300"> Frontend Developer</p>
+            <p class="text-purple-300">Software Developer</p>
           </div>
           
           <div class="flex flex-wrap justify-center gap-6 mb-6 md:mb-0">
@@ -16,7 +16,7 @@
           </div>
           
           <div class="flex space-x-4">
-            <a href="https://github.com/" target="_blank" class="text-purple-300 hover:text-pink-200 transition cursor-pointer">
+            <a href="https://github.com/chemuu933/" target="_blank" class="text-purple-300 hover:text-pink-200 transition cursor-pointer">
               <i class="fab fa-github text-xl"></i>
             </a>
             <a href="https://linkedin.com/" target="_blank" class="text-purple-300 hover:text-pink-200 transition cursor-pointer">
@@ -25,24 +25,20 @@
             <a href="https://twitter.com/" target="_blank" class="text-purple-300 hover:text-pink-200 transition cursor-pointer">
               <i class="fab fa-twitter text-xl"></i>
             </a>
-            <a href="https://codepen.io/" target="_blank" class="text-purple-300 hover:text-pink-200 transition cursor-pointer">
-              <i class="fab fa-codepen text-xl"></i>
+            <a href="https://wa.me/0708345963" target="_blank" class="text-purple-300 hover:text-pink-200 transition cursor-pointer">
+              <i class="fab fa-whatsapp text-xl"></i>
+            </a>
+            <a href="https://instagram.com/junechemu63" target="_blank" class="text-purple-300 hover:text-pink-200 transition cursor-pointer">
+              <i class="fab fa-instagram text-xl"></i>
             </a>
           </div>
         </div>
         
         <hr class="border-purple-700 my-8">
         
-        <div class="flex flex-col md:flex-row justify-between items-center">
-          <div class="text-purple-400 mb-4 md:mb-0">
+        <div class="flex flex-col md:flex-row justify-center items-center">
+          <div class="text-purple-400">
             &copy; {{ currentYear }} Christine. All rights reserved.
-          </div>
-          
-          <div class="flex items-center space-x-4">
-            <span class="text-purple-400">Accepted Payment Methods:</span>
-            <i class="fab fa-cc-visa text-xl text-purple-300"></i>
-            <i class="fab fa-cc-mastercard text-xl text-purple-300"></i>
-            <i class="fab fa-cc-paypal text-xl text-purple-300"></i>
           </div>
         </div>
       </div>
