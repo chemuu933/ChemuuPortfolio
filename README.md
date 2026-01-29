@@ -136,19 +136,8 @@ If your project needs environment variables (API keys, analytics IDs), create a 
 - If dev server port is busy: set PORT environment variable or close the conflicting app.
 - Build errors: check which Vue tooling (Vite vs Vue CLI) is used and ensure node version compatibility.
 
-## License
-Add a license file to the repository. Example: MIT. To use MIT, include a LICENSE file with the MIT text and add:
-```
-MIT License
-```
-at the top of the README or badge as desired.
 
-## Author / Contact
-Maintained by chemuu933 (they/them).  
-GitHub: https://github.com/chemuu933
 
-If you want, I can:
-- Generate a LICENSE file (MIT) and add it to the repo,
-- Create a ready-to-use GitHub Actions workflow for automatic build + deploy,
-- Or customize the README with screenshots and live demo URLs. Which would you like me to add?
+
+
 
