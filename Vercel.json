@@ -1,0 +1,12 @@
+{
+ "build":[
+    {
+        "src":"package.json",
+        "use":"@vercel/static-builde",
+        "config":
+        {
+            "distDir":"dist"
+        }
+    }
+ ]
+} 
