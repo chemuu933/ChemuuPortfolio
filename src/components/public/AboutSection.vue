@@ -112,7 +112,10 @@
             class="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in-up"
             style="animation-delay: 0.7s"
           >
-            <button
+            <a
+              href="https://wa.me/254708345963"
+              target="_blank"
+              rel="noopener noreferrer"
               class="group relative px-8 py-4 bg-gradient-to-r from-teal-500 to-emerald-500 text-white font-semibold rounded-full overflow-hidden transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-2xl animate-pulse-glow"
             >
               <span class="relative z-10 flex items-center gap-2">
@@ -125,9 +128,12 @@
               <div
                 class="absolute inset-0 bg-white opacity-0 group-hover:opacity-20 animate-shimmer"
               ></div>
-            </button>
+            </a> 
 
-            <button
+            <a
+              href="https://eu.docworkspace.com/d/sbPask59BjsmW9ZT_vche7o5u7slevod6f4?sa=601.1037"
+              target="_blank"
+              rel="noopener noreferrer"
               class="group relative px-8 py-4 bg-transparent text-teal-300 font-semibold rounded-full border-2 border-teal-400 overflow-hidden transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-2xl animate-border-glow"
             >
               <span class="relative z-10 flex items-center gap-2">
@@ -140,7 +146,7 @@
               <span
                 class="absolute inset-0 border-2 border-teal-300 rounded-full animate-ping-slow opacity-20"
               ></span>
-            </button>
+            </a>
           </div>
         </div>
       </div>

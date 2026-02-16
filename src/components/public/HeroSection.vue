@@ -175,7 +175,7 @@
                 </div>
 
                 <!-- Code brackets for Development (left-middle) -->
-                <div class="absolute top-1/2 -left-6 transform -translate-y-1/2 w-12 h-12 bg-gradient-to-br from-green-400 to-teal-500 rounded-xl flex items-center justify-center text-white font-bold text-lg shadow-lg shadow-green-400/50 animate-float-code-6 transform hover:scale-110 transition-transform cursor-pointer">
+                <div class="absolute top-1/2 -left-6 tran sform -translate-y-1/2 w-12 h-12 bg-gradient-to-br from-green-400 to-teal-500 rounded-xl flex items-center justify-center text-white font-bold text-lg shadow-lg shadow-green-400/50 animate-float-code-6 transform hover:scale-110 transition-transform cursor-pointer">
                   [ ]
                 </div>
               </div>
